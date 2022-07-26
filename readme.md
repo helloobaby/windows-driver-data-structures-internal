@@ -1,5 +1,7 @@
-正经项目最好还是用windows内核中提供的原子性api来操作数据结构。
+windows slist data struct usage
+
+
+
 
 PS:  
-用户层搞进来的stl不保证线程安全的,内核处理的数据太多就会崩。  
-自己写一个保证线程安全的STL很困难(每个操作都用spinlock)
+c++ stl is not thread safe and atomic safe
