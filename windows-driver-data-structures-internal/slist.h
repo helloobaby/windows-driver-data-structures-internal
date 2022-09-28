@@ -23,6 +23,9 @@ public:
 		NT_ASSERTMSG("call InitSlist first", Head);
 		return ExQueryDepthSList(Head); }
 	PSLIST_HEADER GetRawHeadPtr() { return Head; }
+	void DeleteThisList() { 
+		if(Head) 
+			ExFreePool(Head); }
 private:
 	PSLIST_HEADER Head = nullptr;
 
